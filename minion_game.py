@@ -1,3 +1,28 @@
+# WORKS FOR ALL
+
+vowels = ['A','E','I','O','U']
+
+def minion_game(string):
+    strt_scr = 0
+    kvn_scr = 0
+
+    for i in range(len(string)):
+        if string[i] in vowels:
+            kvn_scr += len(string)-i
+        else:
+            strt_scr += len(string)-i
+
+    if strt_scr>kvn_scr:
+        print(f'Stuart {strt_scr}')
+    elif strt_scr==kvn_scr:
+        print(f'Draw')
+    else:
+        print(f'Kevin {kvn_scr}')
+
+if __name__ == '__main__':
+    s = input()
+    minion_game(s)
+
 # WORKS ONLY FOR SHORT INPUT STRINGS BECAUSE OF THE USE OF LISTS, MAY CAUSE RUNTIME ERROR BECAUSE OF HIGHER MEMORY USAGE.
 
 
@@ -38,7 +63,5 @@
 # if __name__ == '__main__':
 #     s = input()
 #     minion_game(s)
-
-
 
 
